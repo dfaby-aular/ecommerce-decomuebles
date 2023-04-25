@@ -1,18 +1,22 @@
-import React from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
-import 'bootstrap/dist/css/bootstrap.css';
 import  NavBar  from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
+import { Route, Routes } from 'react-router-dom';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 
 function App() {
 
   return (
-    <div className="App">
+    <>
       <NavBar/> 
-      <ItemListContainer greeting="Bienvenidos a nuestra tienda DecoMuebles"/>
-    </div>
+      <Routes>
+        <Route path='' element={<ItemListContainer/>}/>
+        <Route path="/category/:id" element={<ItemListContainer/>} />
+        <Route path="/detail/:id" element={<ItemDetailContainer />} />
+      </Routes>
+      
+    </>
   )
 }
 
