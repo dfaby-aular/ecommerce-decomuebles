@@ -87,9 +87,10 @@ const CreateNewProduct = () => {
             {loading ? (<>
                 <Loading loading={loading} />
             </>) : (<>
-                <div style={{ marginTop: '50px' }}>
-                    <div className="deco-mueble" style={{ margin: "0px auto" }}>
+                <div className="features  justify-content-center " style={{ margin: "200px 400px 100px 400px" }}>
+                    <div className="deco-mueble items-container" style={{ margin: "0px auto" }}>
                         <h2 className="text-center">{id ? 'Actualizar producto' : 'Crear nuevo producto'}</h2>
+                        </div>
                         <form style={{ marginTop: '50px', textAlign: "left" }}>
                             <div className="row">
                                 <div className="col-4">
@@ -161,7 +162,6 @@ const CreateNewProduct = () => {
                             </div>
                         </form>
                         <Button className="text-center" variant="primary" textButton="Guardar" click={() => createProduct()} />
-                    </div>
                 </div>
             </>)}
         </>
